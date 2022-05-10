@@ -81,5 +81,12 @@ public class MainController {
 		
 		return "redirect:/book-list";
 	}
+	
+	@RequestMapping("/book-preview")
+	public String getBookPage(@RequestParam int id, Model model) {
+		model.addAttribute("book", bookDAO.getBookById(id));
+		
+		return "book-preview";
+	}
 
 }

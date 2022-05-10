@@ -10,12 +10,7 @@
 <body>
 	<br> Welcome! ${message}
 	<br>
-	<br> Links:
-	<br>
-	<br>
-	<a href="user-list">Users</a>
-	<br>
-	<br>
+	<br> Link:
 	<a href="book-list">Books</a>
 </body>
 </html>

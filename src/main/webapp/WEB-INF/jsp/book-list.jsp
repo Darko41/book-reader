@@ -24,6 +24,8 @@ th, td {
 				<th>Book Title</th>
 				<th>Author</th>
 				<th>Book Description</th>
+				<th>Delete</th>
+				<th>Edit</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -37,6 +39,12 @@ th, td {
 					</td>
 					<td>
 						${book.description}
+					</td>
+					<td>
+						<a href="book-delete?id=${book.id}">Delete the book: ${book.title}</a>
+					</td>
+					<td>
+						<a href="book-form-update?id=${book.id}">Edit the book: ${book.title}</a>
 					</td>
 				</tr>
 			</c:forEach>

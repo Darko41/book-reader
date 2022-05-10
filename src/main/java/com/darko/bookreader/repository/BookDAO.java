@@ -10,7 +10,7 @@ public interface BookDAO {
 	
 	public void saveBook(Book book);
 	
-	public void deleteBook(Book book);
+	public void deleteBook(int id);
 	
 	public Book getBookById(int id);
 

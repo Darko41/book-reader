@@ -7,9 +7,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.darko.bookreader.entity.Book;
@@ -38,22 +36,28 @@ public class BookDAOImpl implements BookDAO{
 		return books;
 	}
 
+	@Transactional
 	@Override
 	public void saveBook(Book book) {
-		// TODO Auto-generated method stub
-		
+		Session session = entityManager.unwrap(Session.class);
+		session.saveOrUpdate(book);
 	}
 
+	@Transactional
 	@Override
-	public void deleteBook(Book book) {
-		// TODO Auto-generated method stub
+	public void deleteBook(int id) {
+		Session session = entityManager.unwrap(Session.class);
+		Book book = session.get(Book.class, id);
 		
+		session.delete(book);		
 	}
 
+	@Transactional
 	@Override
 	public Book getBookById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = entityManager.unwrap(Session.class);
+		Book book = session.get(Book.class, id);
+		return book;
 	}
 
 }

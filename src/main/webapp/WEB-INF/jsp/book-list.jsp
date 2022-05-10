@@ -50,5 +50,8 @@ th, td {
 			</c:forEach>
 		</tbody>
 	</table>
+	<br>
+	<a href="book-form">Add New Book</a>
+	
 </body>
 </html>

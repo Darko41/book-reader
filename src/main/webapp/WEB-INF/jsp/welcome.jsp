@@ -8,12 +8,14 @@
 <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-	<br> Message: ${message}
+	<br> Welcome! ${message}
+	<br>
 	<br> Links:
-	Users:
-	<a href="user-list"/>
-	
-	Books:
-	<a href="book-list"/>
+	<br>
+	<br>
+	<a href="user-list">Users</a>
+	<br>
+	<br>
+	<a href="book-list">Books</a>
 </body>
 </html>

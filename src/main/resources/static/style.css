@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+
+body {
+	font-size: 2em;
+}
+
+table, th, td {
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+
+th,td {
+	background-color: #96D4D4;
+}

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class WelcomeController {
 	
-	@Value("${application.message:The books are here!}")
+	@Value("${application.message:The books are here!!}")
 	private String helloMessage;
 	
 	@GetMapping("/")

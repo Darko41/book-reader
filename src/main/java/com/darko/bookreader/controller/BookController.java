@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.darko.bookreader.entity.Book;
 import com.darko.bookreader.repository.BookDAO;
-import com.darko.bookreader.repository.UserRepository;
+import com.darko.bookreader.repository.UserDAO;
 
 @Controller
 //@RequestMapping(path = "/books")
-public class MainController {
+public class BookController {
 
 	@Autowired
 	private BookDAO bookDAO;

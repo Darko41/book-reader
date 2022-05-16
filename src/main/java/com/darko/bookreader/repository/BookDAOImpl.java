@@ -60,4 +60,15 @@ public class BookDAOImpl implements BookDAO{
 		return book;
 	}
 
+	@Transactional
+	@Override
+	public Book getBookByName(String name) {
+		Session session = entityManager.unwrap(Session.class);
+		Book book = session.get(Book.class, name);
+		
+		return book;
+	}
+	
+	
+
 }

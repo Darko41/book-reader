@@ -1,7 +1,7 @@
 package com.darko.bookreader.book;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,23 +19,39 @@ public class BookRepositoryTest {
 	@Mock
 	private BookDAO bookDAO;
 	
+	// CRUD Testing:
+	
+//	@Test
+//	void itShouldCreateNewBook() {		// C – Create Functionality
+//		
+//		// given
+//		Book book1 = new Book("Hobiti", "Tolkin", "Opis4");
+//		Book book2 = new Book("Lovac na zmajeve	", "Haled Hoseini", "Opis3");
+//		
+//		bookDAO.saveBook(book1);
+//		bookDAO.saveBook(book2);
+//		
+//		// when
+//		Book b1 = bookDAO.getBookByName("DaVincijev kod");
+//		
+//
+//		// then
+////		assertThat(book.equals(b));
+//		assertThat(null);
+//	}
+	
 	@Test
-	void itShouldGetBookByName() {
+	void itShouldGetBookByTitle() {		// R – Read Functionality
 		
 		// given
 		Book book = new Book("Hobiti", "Tolkin", "Opis4");
-//		when(bookDAO.saveBook(book)).thenReturn(book);
-		
-//		final Book b saveBook = bookDAO.saveBook(book);
-		
-		
-		bookDAO.saveBook(book);
 		
 		// when
-		Book b = bookDAO.getBookByName("DaVincijev kod");
-
+		String actual = book.getTitle();
+		String expected = "Hobiti";
+		
 		// then
-		assertThat(book.equals(b));
+		assertEquals(actual, expected);
 	}
 
 }

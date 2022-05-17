@@ -62,7 +62,7 @@ public class BookDAOImpl implements BookDAO{
 
 	@Transactional
 	@Override
-	public Book getBookByName(String name) {
+	public Book getBookByTitle(String name) {
 		Session session = entityManager.unwrap(Session.class);
 		Book book = session.get(Book.class, name);
 		

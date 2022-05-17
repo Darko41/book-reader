@@ -14,6 +14,6 @@ public interface BookDAO {
 	
 	public Book getBookById(int id);
 	
-	public Book getBookByName(String name);
+	public Book getBookByTitle(String name);
 
 }

@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		UserBuilder users = User.withDefaultPasswordEncoder();
 		
 		auth.inMemoryAuthentication()
-		.withUser(users.username("Janko").password("janko123").roles("admin"));
+		.withUser(users.username("janko").password("janko123").roles("admin"));
 	}
 	
 	

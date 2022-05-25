@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.darko.bookreader.entity.User;
-import com.darko.bookreader.repository.UserDAO;
+import com.darko.bookreader.service.UserDAO;
 
 @Controller
 public class UserController {

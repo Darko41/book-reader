@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.darko.bookreader.entity.Book;
-import com.darko.bookreader.repository.BookDAO;
+import com.darko.bookreader.service.BookDAO;
 
 @Controller
 //@RequestMapping(path = "/books")

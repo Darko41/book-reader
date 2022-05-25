@@ -1,4 +1,4 @@
-package com.darko.bookreader.repository;
+package com.darko.bookreader.service;
 
 import java.util.List;
 

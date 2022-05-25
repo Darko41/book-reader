@@ -1,4 +1,4 @@
-package com.darko.bookreader.book;
+package com.darko.bookreader;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.formLogin;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.request.RequestPostProcessor;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class BookControllerTests {
+public class AuthenticationTests {
 	
 	@Autowired
 	private MockMvc mockMvc;

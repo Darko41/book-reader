@@ -9,8 +9,8 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.darko.bookreader.controller.BookController;
 import com.darko.bookreader.controller.UserController;
-import com.darko.bookreader.repository.BookDAO;
-import com.darko.bookreader.repository.UserDAO;
+import com.darko.bookreader.service.BookDAO;
+import com.darko.bookreader.service.UserDAO;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")

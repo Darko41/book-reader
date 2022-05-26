@@ -11,6 +11,6 @@
 	<br> Welcome! ${message}
 	<br>
 	<br> Link:
-	<a href="book-list">Books</a>
+	<a href="book-listed">Books</a>
 </body>
 </html>

@@ -6,20 +6,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.darko.bookreader.entity.Book;
 import com.darko.bookreader.service.BookDAO;
 
 @Controller
-//@RequestMapping(path = "/books")
+//@RequestMapping(path = "/")
 public class BookController {
 
 	@Autowired
 	private BookDAO bookDAO;
 	
-	//B O O K S:
-	
-	@RequestMapping("/book-list")
+	@RequestMapping("/book-listed")
 	public String getBookListPage(Model model) {
 		model.addAttribute("books", bookDAO.getBooks());
 		

@@ -45,14 +45,14 @@ th, td {
 						<a href="book-delete?id=${book.id}">Delete the book: ${book.title}</a>
 					</td>
 					<td>
-						<a href="book-form-update?id=${book.id}">Edit the book: ${book.title}</a>
+						<a href="edit-book?id=${book.id}">Edit the book: ${book.title}</a>
 					</td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 	<br>
-	<a href="book-form">Add New Book</a>
+	<a href="book-new">Add New Book</a>
 	
 </body>
 </html>

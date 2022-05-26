@@ -40,7 +40,7 @@
          </div>
          <div class="card-footer">
          	<button type="submit" class="btn btn-primary">Save</button>
-            <a href="book-list" class="btn btn-outline-secondary">Cancel</a>
+            <a href="book-listed" class="btn btn-outline-secondary">Cancel</a>
          </div>
 	</form:form>
 </body>

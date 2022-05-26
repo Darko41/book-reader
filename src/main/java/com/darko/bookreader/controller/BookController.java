@@ -29,10 +29,10 @@ public class BookController {
 	public String deleteBook(@RequestParam int id) {
 		bookDAO.deleteBook(id);
 		
-		return "redirect:/book-list";
+		return "redirect:/book-listed";
 	}
 	
-	@RequestMapping("/book-form")
+	@RequestMapping("/book-new")
 	public String getBookForm(Model model) {
 		model.addAttribute("book", new Book());
 		model.addAttribute("books", bookDAO.getBooks());
@@ -40,7 +40,7 @@ public class BookController {
 		return "book-form";
 	}
 	
-	@RequestMapping("/book-form-update")
+	@RequestMapping("/edit-book")
 	public String getBookUpdateForm(@RequestParam int id, Model model) {
 		model.addAttribute("book", bookDAO.getBookById(id));
 		model.addAttribute("books", bookDAO.getBooks());
@@ -52,7 +52,7 @@ public class BookController {
 	public String saveBook(@ModelAttribute Book book) {
 		bookDAO.saveBook(book);
 		
-		return "redirect:/book-list";
+		return "redirect:/book-listed";
 	}
 	
 	@RequestMapping("/single-book-preview")

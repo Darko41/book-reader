@@ -55,7 +55,7 @@ public class BookController {
 		return "redirect:/book-list";
 	}
 	
-	@RequestMapping("/book-preview")
+	@RequestMapping("/single-book-preview")
 	public String getBookPage(@RequestParam int id, Model model) {
 		model.addAttribute("book", bookDAO.getBookById(id));
 		

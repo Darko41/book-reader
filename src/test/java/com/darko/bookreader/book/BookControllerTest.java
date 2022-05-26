@@ -57,5 +57,18 @@ public class BookControllerTest {
 		.andExpect(view().name("book-list"))
 		.andExpect(model().attribute("books", hasSize(2)));
 	}
+	
+	@Test
+	public void testPreviewBook() throws Exception{
+		Integer id = 1;
+		
+		when(bookDAO.getBookById(id)).thenReturn(new Book());
+		
+		mockMvc.perform(get("/single-book-preview?id=1"))
+		.andExpect(status().isOk())
+		.andExpect(view().name("book-preview"))
+		.andExpect(model().attribute("book", instanceOf(Book.class)));
+		
+	}
 
 }

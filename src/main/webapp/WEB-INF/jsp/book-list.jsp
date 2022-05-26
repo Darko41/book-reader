@@ -32,7 +32,7 @@ th, td {
 			<c:forEach var="book" items="${books}">
 				<tr>
 					<td>
-						<a href="book-preview?id=${book.id}">${book.title}</a>
+						<a href="single-book-preview?id=${book.id}">${book.title}</a>
 						
 					</td>
 					<td>

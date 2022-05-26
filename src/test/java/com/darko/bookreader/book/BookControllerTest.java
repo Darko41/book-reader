@@ -5,6 +5,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.hamcrest.Matchers.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,8 +54,8 @@ public class BookControllerTest {
 		
 		mockMvc.perform(get("/book-listed"))
 		.andExpect(status().isOk())
-		.andExpect(view().name("book-list"));
-//		.andExpect(model().attribute("books", 2));
+		.andExpect(view().name("book-list"))
+		.andExpect(model().attribute("books", hasSize(2)));
 	}
 
 }
